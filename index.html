@@ -10,14 +10,15 @@
     <p id="description">Please fill the form for resource information.</p>
     <form action="" id="survey-form">
         <div class="sect-form">
-            <label for="name">Name:</label><input type="text" name="name" id="name" placeholder="Example:John Doe">
+            <label for="name-label" id="name-label">Name:</label><input type="text" name="name-label" id="name" placeholder="Example:John Doe" required>
         </div>
         <div class="sect-form">
-            <label for="email">Email:</label><input type="email" name="email" id="email" placeholder="abc@server.net" required>
+            <label for="email-label" id="email-label">Email:</label><input type="email" name="email-label" id="email" placeholder="abc@server.net" required>
         </div>
         <div class="sect-form">
-            <label for="number">Number of Families:</label><input type="number" name="number" id="number" min="2" max="20" placeholder="Total #">
+            <label for="number-label" id="number-label">Number of Families:</label><input type="number" name="number-label" id="number" min="2" max="20" placeholder="Total #">
         </div>
+        
         <div class="sect-form">
             <p>What resources do you need at this time?</p>
             <select name="Need" id="dropdown">
@@ -30,11 +31,38 @@
                 <option value="seat">Car Seats</option>
                 <option value="assistance">Rent and Bill Assistance</option>
                 <option value="other">Other</option>
+            </select>
         </div>
-        
-        
-
-       
+        <div class="sect-form">
+            <p>Best method of communication?</p>
+            <label for="call"> <input type="radio" name="contact" id="" value="call" checked>Telephone Calls</label>
+            <label for="text"> <input type="radio" name="contact" value="text" id="">Text messages</label>
+            <label for="email"> <input type="radio" name="contact" value="email" id="">Emails</label>
+        </div>
+        <div class="sect-form">
+           <p>Checked which video platform have you used? (Check all that apply)</p> 
+            <label for="zoom">
+                <input type="checkbox" name="video"  id="" value="zoom">Zoom
+            </label>
+            <label for="whatsapp">
+                <input type="checkbox" name="video" id="" value="whatsapp">WhatsApp
+            </label>
+            <label for="google">
+                <input type="checkbox" name="video" id="" value="google">Google Meet
+            </label>
+            <label for="messenger">
+                <input type="checkbox" name="video" id="" value="messenger">Messenger
+            </label>
+        </div>
+        <div class="sect-form">
+            <p>If select "Other" in resources or want to provide any additional details of your needs?</p>
+            <textarea name="additional" class="comment" id="" cols="40" rows="10" placeholder="Enter additional information here..."></textarea>
+        </div>
+        <div class="sect-form">
+            <button type="submit" id="submit" class="submit-button">
+                Submit
+              </button>
+        </div>
         </select>
 
     </form>
